@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katia Store | Catálogo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <header>
+        <div class="nav container">
+            <a href="#" class="logo">Katia <span>Store</span></a>
+            <div class="cart-icon" id="cart-icon">
+                <i class='bx bx-shopping-bag'></i>
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Exclusividad & Estilo</h1>
+            <p>Encuentra el detalle perfecto para ti.</p>
+        </div>
+    </section>
+
+    <section class="shop container">
+        
+        <div class="heading-box">
+            <h2 class="section-title">Nuestra Colección</h2>
+        </div>
+
+        <div class="filter-buttons">
+            <button class="filter-btn active-filter" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="bolsos">Bolsos</button>
+            <button class="filter-btn" data-filter="aretes">Aretes</button>
+            <button class="filter-btn" data-filter="vestidos">Vestidos</button>
+            <button class="filter-btn" data-filter="promocion">Promociones</button>
+            <button class="filter-btn" data-filter="souvenirs">Souvenirs</button>
+        </div>
+
+        <div class="shop-content" id="shop-content">
+            </div>
+
+    </section>
+
+    <div class="cart">
+        <h2 class="cart-title">Tu Pedido</h2>
+        <div class="cart-content"></div>
+        <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">S/ 0.00</div>
+        </div>
+        <button type="button" class="btn-buy" id="btn-buy">
+            Pedir por WhatsApp <i class='bx bxl-whatsapp'></i>
+        </button>
+        <i class='bx bx-x' id="close-cart"></i>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Katia Store. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
