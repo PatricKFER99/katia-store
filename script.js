@@ -49,8 +49,10 @@ function renderProducts(category) {
     productsToShow.forEach(product => {
         const productBox = document.createElement('div');
         productBox.classList.add('product-box');
+        
+        // CORRECCIÓN AQUÍ: Quitamos 'img/' del src
         productBox.innerHTML = `
-            <img src="img/${product.imagen}" alt="${product.nombre}" class="product-img">
+            <img src="${product.imagen}" alt="${product.nombre}" class="product-img">
             <h2 class="product-title">${product.nombre}</h2>
             <div class="price">S/ ${product.precio.toFixed(2)}</div>
             <i class='bx bx-shopping-bag add-cart' onclick="addToCart(${product.id})"></i>
@@ -59,7 +61,7 @@ function renderProducts(category) {
     });
 }
 
-// 4. LÓGICA DEL CARRITO (Igual que antes)
+// 4. LÓGICA DEL CARRITO
 cartIcon.onclick = () => cart.classList.add("active");
 closeCart.onclick = () => cart.classList.remove("active");
 
@@ -81,8 +83,10 @@ function renderCart() {
     cartItems.forEach((item, index) => {
         const cartBox = document.createElement('div');
         cartBox.classList.add('cart-box');
+        
+        // CORRECCIÓN AQUÍ TAMBIÉN: Quitamos 'img/' del src
         cartBox.innerHTML = `
-            <img src="img/${item.imagen}" alt="" class="cart-img">
+            <img src="${item.imagen}" alt="" class="cart-img">
             <div class="detail-box">
                 <div class="cart-product-title">${item.nombre}</div>
                 <div class="cart-price">S/ ${item.precio.toFixed(2)}</div>
